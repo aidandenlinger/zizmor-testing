@@ -17,3 +17,6 @@ jobs:
       - name: Echo the input directly
         run: echo ${{ inputs.sample_input }}
 
+      - name: Run the input directly
+        run: ${{ inputs.sample_input }}
+
