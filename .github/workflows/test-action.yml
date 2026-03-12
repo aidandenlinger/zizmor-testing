@@ -10,9 +10,19 @@ on:
 
 jobs:
   testing-stuff:
+    name: It has a name now
     runs-on: ubuntu-latest
 
     steps:
       - name: Echo the input directly
         run: echo ${{ inputs.sample_input }}
+
+      - name: Run the input directly
+        run: ${{ inputs.sample_input }}
+
+      - name: Use outdated command
+        run: echo "::add-path::$HOME/.local/my-bin"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
 
