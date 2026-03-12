@@ -20,3 +20,9 @@ jobs:
       - name: Run the input directly
         run: ${{ inputs.sample_input }}
 
+      - name: Use outdated command
+        run: echo "::add-path::$HOME/.local/my-bin"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+
