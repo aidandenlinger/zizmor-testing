@@ -10,6 +10,7 @@ on:
 
 jobs:
   testing-stuff:
+    name: It has a name now
     runs-on: ubuntu-latest
 
     steps:
